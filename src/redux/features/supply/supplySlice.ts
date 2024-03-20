@@ -8,11 +8,7 @@ const initialState : TSupplyState= {
 const supplySlice = createSlice({
   name: 'supplies',
   initialState,
-  reducers: {
-
-  }
+  reducers: {}
 })
-
-export const {} = supplySlice.actions;
 
 export default supplySlice.reducer;

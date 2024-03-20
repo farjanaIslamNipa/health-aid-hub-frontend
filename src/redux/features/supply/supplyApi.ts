@@ -26,7 +26,6 @@ export const supplyApi = baseApi.injectEndpoints({
     }),
     updateSupply: builder.mutation({
       query: (args) => {
-        console.log(args, 'args')
         return {
           url: `/update-supply/${args?.id}`,
           method: "PUT",

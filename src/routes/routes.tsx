@@ -11,6 +11,7 @@ import ProtectedRoute from "../components/layouts/ProtectedRoute";
 import SupplyView from "../pages/supplies/SupplyView";
 import SupplyList from "../pages/dashboard/supply/SupplyList";
 import CreateSupply from "../pages/dashboard/supply/CreateSupply";
+import DonatePage from "../pages/supplies/DonatePage";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,12 @@ const router = createBrowserRouter([
       {
         path: "supplies/:id",
         element: <SupplyView />,
+      },
+      {
+        path: "/donate",
+        element: <ProtectedRoute>
+          <DonatePage />
+        </ProtectedRoute>,
       },
     ],
   },

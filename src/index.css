@@ -209,3 +209,11 @@ textarea {
   background-color: #cff1ef;
   border-radius: 100px;
 }
+
+.donate-page-bg{
+  background-image: url('./assets//images/donate.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 200px;
+}

@@ -1,36 +1,26 @@
-import {useNavigate, useParams} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import {useGetSingleSupplyQuery} from "../../redux/features/supply/supplyApi";
-import Button from "../../components/ui/Button";
 import {isValidURL} from "../../utils/validUrl";
 import defaultImage from '../../assets/images/default-img.jpg'
-import {useState} from "react";
-import DonateModal from "./DonateModal";
 import {useAppSelector} from "../../redux/hooks";
 import {currentUser} from "../../redux/features/auth/authSlice";
 import {toast} from "sonner";
+import Button from "../../components/ui/Button";
 
 const SupplyView = () => {
   const {id} = useParams()
-  const {data : supply, isError} = useGetSingleSupplyQuery(id) 
   const user = useAppSelector(currentUser)
+
+  const {data : supply, isError} = useGetSingleSupplyQuery(id) 
   const navigate = useNavigate()
-
-  const [donateModal, setDonateModal] = useState(false);
-
-  const openDonateModal = () => {
+  const handleDonate = () => {
     if(!user?.email){
       toast.warning('To donate you have to login first')
       navigate('/login')
-    }{
-      setDonateModal(true);
+    }else{
+      navigate('/donate')
     }
-  
   }
-
-  const closeDonateModal = () => {
-    setDonateModal(false);
-  }
-
   if (isError) {
     return <p className="p-5 font-bold text-brand text-center">Loading...</p>;
   }
@@ -59,11 +49,13 @@ const SupplyView = () => {
             <p>Category: <b className="text-gray-600">{supply?.data?.category || 'N/F'}</b></p>
             <p>Quantity: <b className="text-gray-600">{supply?.data?.quantity || 'N/F'}</b></p>
             <p className="mt-5"><b>Description:</b>{" "}{supply?.data?.description || 'No description found'}</p>
-            <Button onClick={openDonateModal} className="mt-8">Donate Now</Button>
+            <div className="mt-8">
+              <Button onClick={handleDonate}>Donate Now</Button>
+            </div>
           </div>
         </div>
       </div>
-      <DonateModal  donateModal={donateModal} closeDonateModal={closeDonateModal} supply={supply?.data} user={user} />
+      {/* <DonateModal  donateModal={donateModal} closeDonateModal={closeDonateModal} user={user} /> */}
     </div>
   );
 };
