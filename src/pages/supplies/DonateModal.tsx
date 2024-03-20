@@ -57,19 +57,19 @@ const DonateModal = ({
         <div className="">
           <div className="flex">
             <div className="space-y-2">
-            <p className="font-bold">Name:</p>
-            <p className="font-bold">Email:</p>
-            <p className="font-bold">Donation Title:</p>
-            <p className="font-bold">Category:</p>
-            <p className="font-bold">Quantity:</p>
+              <p className="font-bold">Name:</p>
+              <p className="font-bold">Email:</p>
+              <p className="font-bold">Donation Title:</p>
+              <p className="font-bold">Category:</p>
+              <p className="font-bold">Quantity:</p>
             </div>
             <div className="space-y-2 pl-10">
-            <p className="font-medium">{donationInfo?.name || "Not Found"}</p>
-            <p className="font-medium">{donationInfo?.email || "Not Found"}</p>
-            <p className="font-medium">{donationInfo?.title || "Not Found"}</p>
-            <p className="font-medium">{donationInfo?.category || "Not Found"}</p>
-            <p className="font-medium">{donationInfo?.quantity || "Not Found"}</p>
-          </div>
+              <p className="font-medium">{donationInfo?.name || "Not Found"}</p>
+              <p className="font-medium">{donationInfo?.email || "Not Found"}</p>
+              <p className="font-medium">{donationInfo?.title || "Not Found"}</p>
+              <p className="font-medium">{donationInfo?.category || "Not Found"}</p>
+              <p className="font-medium">{donationInfo?.quantity || "Not Found"}</p>
+            </div>
           </div>
           <p className="my-4 font-semibold text-red-700 text-[18px] text-center">Would you like to contribute a donation to support our cause ?</p>
           <form onSubmit={handleSubmit} className="mt-3">
