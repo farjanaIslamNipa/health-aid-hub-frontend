@@ -1,4 +1,4 @@
-import {Link, useNavigate, useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {useGetSingleSupplyQuery} from "../../redux/features/supply/supplyApi";
 import {isValidURL} from "../../utils/validUrl";
 import defaultImage from '../../assets/images/default-img.jpg'
