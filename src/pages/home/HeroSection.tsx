@@ -17,7 +17,7 @@ const HeroSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="relative">
           <img src={banner} alt="Banner" />
-          <div className="absolute z-40 top-0 bg-brand px-10 rounded-2xl bg-opacity-50  h-full w-full flex items-center justify-center">
+          <div className="absolute z-20 top-0 bg-brand px-10 rounded-2xl bg-opacity-50  h-full w-full flex items-center justify-center">
             <h1 className="text-white font-extrabold leading-8 text-[28px] sm:text-3xl lg:text-4xl xl:text-5xl">
               Building Bridges to Health in Times of Crisis
             </h1>

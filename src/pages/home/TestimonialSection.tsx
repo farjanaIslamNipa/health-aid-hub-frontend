@@ -16,10 +16,10 @@ const TestimonialSection = () => {
     <div className="bg-brand bg-opacity-55 pt-10 lg:pt-20 mt-16 lg:mt-20 pb-12 md:pb-14 lg:pb-[70px] xl:pb-20">
       <div className="custom-container">
         <h1 className="section-title text-white">Testimonials</h1>
-        <p className="text-lg font-medium text-white pr-8 text-center">
+        <p className="text-lg font-medium text-white pr-0 lg:pr-8 text-center">
           Supplier Spotlight: Voices from Our Trusted Medical Partners
         </p>
-        <div className="grid grid-cols-12 gap-x-4 mt-10 lg:mt-14 items-center">
+        <div className="grid grid-cols-12 gap-x-4 mt-0 md:mt-10 lg:mt-14 items-center">
           <motion.div
           variants={fadeIn("down", 0.1)}
           initial="hidden"
@@ -36,14 +36,14 @@ const TestimonialSection = () => {
           whileInView={"show"}
           viewport={{once: false, amount: 0.7}}
           className="col-span-12 lg:col-span-8 xl:col-span-7">
-            <div className="bg-white p-8 relative">
+            <div className="bg-white p-0 sm:p-8 relative">
               <Swiper spaceBetween={30} slidesPerView={1} loop={true}>
-                <div className="absolute z-50 bottom-0 right-[88px] visible">
+                <div className="absolute z-50 bottom-8 sm:bottom-0 right-[80px] sm:right-[88px] visible">
                   <SwiperBtnNext className="h-9 w-9 shadow-md flex justify-center items-center bg-secondary transition-all delay-100 ease-in-out">
                     <img src={arrowNext} alt="Next" />
                   </SwiperBtnNext>
                 </div>
-                <div className="absolute z-50 bottom-0 right-32 visible">
+                <div className="absolute z-50 bottom-8 sm:bottom-0 right-[35px] sm:right-32 visible">
                   <SwiperBtnPrev className="h-9 w-9 shadow-md flex justify-center items-center bg-secondary transition-all delay-100 ease-in-out">
                     <img src={arrowPrev} alt="Prev" />
                   </SwiperBtnPrev>
