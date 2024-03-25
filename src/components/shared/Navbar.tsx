@@ -9,6 +9,8 @@ import logoutIcon from "../../assets/images/logout.svg";
 import {useAppDispatch, useAppSelector} from "../../redux/hooks";
 import {currentToken, logoutUser} from "../../redux/features/auth/authSlice";
 import {toast} from "sonner";
+import volunteerIcon from '../../assets/images/volunteer.svg'
+import ThemeButton from "../ui/ThemeButton";
 
 const Navbar = () => {
   const [expand, setExpand] = useState(false);
@@ -20,14 +22,42 @@ const Navbar = () => {
     toast.success('Logout successfully', {duration: 2000})
   }
 
+
   return (
-    <div className="bg-black md:bg-white shadow relative z-50">
-      <div className="custom-container py-2 bg-white ">
+    <div className="bg-black md:bg-white dark:bg-gray-900 shadow relative z-50">
+      <div className="bg-[#DFFCF1] dark:bg-[#96e9e4] relative py-1">
+        <div className="custom-container">
+          <div className=" flex justify-center md:justify-end items-center gap-4">
+            {/* Theme switch button */}
+            <ThemeButton />
+            <NavLink className="flex items-center gap-2" to="/volunteer" end>
+              <img src={volunteerIcon} alt="Login" className="h-5" />
+              <span className="text-gray-600 hover:text-brand font-bold">Join as a volunteer</span>
+            </NavLink>
+            {
+              !token && 
+              <NavLink to="/login" className="flex items-center gap-1">
+                <img src={loginIcon} alt="Login" className="h-5" />
+                <span className="text-gray-600 font-bold">Login</span>
+              </NavLink>
+            }
+
+            {
+              token && 
+              <button onClick={handleLogout} className="flex items-center gap-1">
+                <img src={logoutIcon} alt="Logout" className="h-4" />
+                <span className="text-gray-600 font-bold">Logout</span>
+              </button>
+            }
+          </div>
+        </div>
+      </div>
+      <div className="custom-container py-2 bg-white dark:bg-gray-900">
         <div className="">
           <nav className="flex justify-between items-center">
             <div>
               <NavLink to="/" end>
-                <img src={logo} alt="Logo" className="h-16" />
+                <img src={logo} alt="Logo" className="h-14 lg:h-16" />
               </NavLink>
             </div>
             <div
@@ -36,7 +66,7 @@ const Navbar = () => {
                 { "w-full": expand }
               )}
             >
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-2 pt-4 md:pt-0 w-[70%] md:w-full bg-white h-screen md:h-auto">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-2 pt-4 md:pt-0 w-[70%] md:w-full bg-white dark:bg-gray-900 h-screen md:h-auto">
                 {expand && (
                   <div className="absolute right-6 top-5 block md:hidden">
                     <button
@@ -50,33 +80,26 @@ const Navbar = () => {
                 <div className="pl-5 pb-6 block md:hidden">
                   <img src={logo} alt="Logo" className="h-14" />
                 </div>
-                <NavLink to="/" className='nav-item' end>
-                  Home
-                </NavLink>
                 <NavLink to="/supplies" className="nav-item" end>
                   All Supplies
                 </NavLink>
+
+                  <NavLink to="/leaderboard" className="nav-item" end>
+                    Leaderboard
+                  </NavLink>
+                  <NavLink to="/community" className="nav-item" end>
+                    Community
+                  </NavLink>
+                  <NavLink to="/about-us" className="nav-item" end>
+                    About us
+                  </NavLink>
                 {
                   token && 
                   <NavLink to="/dashboard" className="nav-item" end>
                     Dashboard
                   </NavLink>
                 }
-                {
-                  !token && 
-                  <NavLink to="/login" className="nav-item flex items-center gap-1 ">
-                    <img src={loginIcon} alt="Login" className="h-5" />
-                    <span>Login</span>
-                  </NavLink>
-                }
 
-                {
-                  token && 
-                  <button onClick={handleLogout} className="nav-item flex items-center gap-1 ">
-                    <img src={logoutIcon} alt="Logout" className="h-4" />
-                    <span>Logout</span>
-                  </button>
-                }
               </div>
             </div>
             <div className="block md:hidden">

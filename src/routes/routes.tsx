@@ -11,7 +11,12 @@ import ProtectedRoute from "../components/layouts/ProtectedRoute";
 import SupplyView from "../pages/supplies/SupplyView";
 import SupplyList from "../pages/dashboard/supply/SupplyList";
 import CreateSupply from "../pages/dashboard/supply/CreateSupply";
-import DonatePage from "../pages/supplies/DonatePage";
+import DonatePage from "../pages/donation/DonatePage";
+import DonorLeaderBoard from "../pages/donation/DonorLeaderBoard";
+import Community from "../pages/community/Community";
+import CreateTestimonial from "../pages/dashboard/testimonials/CreateTestimonial";
+import AboutUs from "../pages/AboutUs";
+import VolunteerSignUp from "../pages/volunteer/VolunteerSignUp";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +41,22 @@ const router = createBrowserRouter([
           <DonatePage />
         </ProtectedRoute>,
       },
+      {
+        path: "/leaderboard",
+        element: <DonorLeaderBoard />,
+      },
+      {
+        path: "/community",
+        element: <Community />,
+      },
+      {
+        path: "/volunteer",
+        element: <VolunteerSignUp />,
+      },
+      {
+        path: "/about-us",
+        element: <AboutUs />,
+      },
     ],
   },
   {
@@ -57,6 +78,10 @@ const router = createBrowserRouter([
       {
         path: "create-supply",
         element: <CreateSupply />,
+      },
+      {
+        path: "create-testimonial",
+        element: <CreateTestimonial />,
       },
     ],
   },

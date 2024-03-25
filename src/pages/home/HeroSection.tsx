@@ -23,8 +23,8 @@ const HeroSection = () => {
             </h1>
           </div>
         </div>
-        <div className="relative bg-brand bg-opacity-10 hidden md:block">
-          <ul className="slideshow border">
+        <div className="relative bg-[#DFFCF1] dark:bg-gray-800 hidden md:block">
+          <ul className="slideshow">
             <li>
               <span>
                 <img src={slide1} alt="" />
@@ -61,25 +61,25 @@ const HeroSection = () => {
        className="bottom-bar py-6 sm:py-8 bg-brand bg-opacity-40">
         <div className="custom-container">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6">
-            <div className="bg-white p-3 lg:p-6 rounded-xl text-center">
+            <div className="bg-white dark:bg-brand p-3 lg:p-6 rounded-xl text-center">
               <img src={card1} alt="" className="h-6 sm:h-10 mx-auto" />
               <p className="font-bold leading-4 md:leading-5 mt-1 text-sm md:text-base">
                 Evaluating Suppliers
               </p>
             </div>
-            <div className="bg-white p-3 lg:p-6 rounded-xl text-center">
+            <div className="bg-white dark:bg-brand p-3 lg:p-6 rounded-xl text-center">
               <img src={card2} alt="" className="h-6 sm:h-10 mx-auto" />
               <p className="font-bold leading-4 md:leading-5 mt-1 text-sm md:text-base">
                 Achieving Synergy
               </p>
             </div>
-            <div className="bg-white p-3 lg:p-6 rounded-xl text-center">
+            <div className="bg-white dark:bg-brand p-3 lg:p-6 rounded-xl text-center">
               <img src={card4} alt="" className="h-6 sm:h-10 mx-auto" />
               <p className="font-bold leading-4 md:leading-5 mt-1 text-sm md:text-base">
                 Centralizing Inventory Control{" "}
               </p>
             </div>
-            <div className="bg-white p-3 lg:p-6 rounded-xl text-center">
+            <div className="bg-white dark:bg-brand p-3 lg:p-6 rounded-xl text-center">
               <img src={card3} alt="" className="h-6 sm:h-10 mx-auto" />
               <p className="font-bold leading-4 md:leading-5 mt-1 text-sm md:text-base">
                 Price Transparency{" "}

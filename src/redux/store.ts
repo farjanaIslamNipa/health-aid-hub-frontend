@@ -3,6 +3,9 @@ import {baseApi} from './api/baseApi'
 import authReducer from './features/auth/authSlice'
 import supplyReducer from './features/supply/supplySlice'
 import donationReducer from './features/donations/donationSlice'
+import commentsReducer from './features/comments/commentSlice'
+import testimonialReducer from './features/testimonials/testimonialSlice'
+import volunteerReducer from './features/volunteers/volunteerSlice'
 import storage from 'redux-persist/lib/storage'
 import { 
   persistReducer, 
@@ -26,7 +29,10 @@ export const store = configureStore({
     [baseApi.reducerPath] : baseApi.reducer,
     auth: persistedAuthReducer,
     supplies: supplyReducer,
-    donations: donationReducer
+    donations: donationReducer,
+    comments: commentsReducer,
+    testimonials: testimonialReducer,
+    volunteers: volunteerReducer,
   },
   middleware : (getDefaultMiddlewares) => getDefaultMiddlewares({
     serializableCheck: {
