@@ -50,8 +50,8 @@ const DonorLeaderBoard = () => {
             <img src={leaderImg} className='h-[300px] w-auto rounded-xl mx-auto md:mx-0' alt="Donor Leaders" />
           </div>
           <div className='col-span-12 md:col-span-7 lg:col-span-8 space-y-4 pl-0 md:pl-8 mt-6 md:mt-0'>
-            <p>Your generosity serves as a beacon of hope during these challenging times. Your contribution will not only aid in our mission to provide essential care to those in need but will also play a crucial role in saving lives and alleviating suffering.</p>
-            <p>In times like these, the importance of community support cannot be overstated. Your willingness to lend a helping hand reflects the true spirit of compassion and solidarity that binds us together as a community.</p>
+            <p className='text-sm md:text-base'>Your generosity serves as a beacon of hope during these challenging times. Your contribution will not only aid in our mission to provide essential care to those in need but will also play a crucial role in saving lives and alleviating suffering.</p>
+            <p className='text-sm md:text-base'>In times like these, the importance of community support cannot be overstated. Your willingness to lend a helping hand reflects the true spirit of compassion and solidarity that binds us together as a community.</p>
             <p className="my-4 font-semibold text-red-700 text-[18px]">Would you like to contribute a donation to support our cause ?</p>
             <Button onClick={handleDonate}>Donate Now</Button>
           </div>
@@ -61,7 +61,7 @@ const DonorLeaderBoard = () => {
         <div className='custom-container'>
 
           <div className=" sm:max-w-[90%] lg:max-w-[70%] xl:max-w-[60%] mx-auto bg-white dark:bg-gray-900 rounded-2xl px-5 md:px-10 pt-6 pb-8 shadow-lg">
-          <h1 className="text-center text-2xl font-bold pb-8">Champions of Generosity: Donors Leaderboard</h1>
+          <h1 className="text-center text-xl md:text-2xl font-bold pb-8">Champions of Generosity: Donors Leaderboard</h1>
             <div className="overflow-x-auto relative">
               <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">

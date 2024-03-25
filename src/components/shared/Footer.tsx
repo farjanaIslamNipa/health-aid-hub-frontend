@@ -30,7 +30,7 @@ const Footer = () => {
                     </div>
                     <div className="border-r-none md:border-r border-gray-500 flex justify-start md:justify-center">
                       <div>
-                        <NavLink to="/privacy-policy" className="font-semibold px-4 py-1 block">
+                        <NavLink to="/terms-and-conditions" className="font-semibold px-4 py-1 block">
                           Terms & Conditions
                         </NavLink>
                         <NavLink to="/privacy-policy" className="font-semibold px-4 py-1 block">Privacy Policy</NavLink>

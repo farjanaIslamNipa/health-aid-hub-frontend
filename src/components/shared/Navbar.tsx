@@ -27,18 +27,18 @@ const Navbar = () => {
     <div className="bg-black md:bg-white dark:bg-gray-900 shadow relative z-50">
       <div className="bg-[#DFFCF1] dark:bg-[#96e9e4] relative py-1">
         <div className="custom-container">
-          <div className=" flex justify-center md:justify-end items-center gap-4">
+          <div className=" flex justify-between md:justify-end items-center gap-4">
             {/* Theme switch button */}
             <ThemeButton />
             <NavLink className="flex items-center gap-2" to="/volunteer" end>
               <img src={volunteerIcon} alt="Login" className="h-5" />
-              <span className="text-gray-600 hover:text-brand font-bold">Join as a volunteer</span>
+              <span className="text-gray-600 hover:text-brand font-bold text-sm md:text-base">Join as a volunteer</span>
             </NavLink>
             {
               !token && 
               <NavLink to="/login" className="flex items-center gap-1">
                 <img src={loginIcon} alt="Login" className="h-5" />
-                <span className="text-gray-600 font-bold">Login</span>
+                <span className="text-gray-600 font-bold text-sm md:text-base">Login</span>
               </NavLink>
             }
 
@@ -46,7 +46,7 @@ const Navbar = () => {
               token && 
               <button onClick={handleLogout} className="flex items-center gap-1">
                 <img src={logoutIcon} alt="Logout" className="h-4" />
-                <span className="text-gray-600 font-bold">Logout</span>
+                <span className="text-gray-600 font-bold text-sm md:text-base">Logout</span>
               </button>
             }
           </div>
@@ -57,7 +57,7 @@ const Navbar = () => {
           <nav className="flex justify-between items-center">
             <div>
               <NavLink to="/" end>
-                <img src={logo} alt="Logo" className="h-14 lg:h-16" />
+                <img src={logo} alt="Logo" className="h-12 lg:h-16" />
               </NavLink>
             </div>
             <div
@@ -104,7 +104,7 @@ const Navbar = () => {
             </div>
             <div className="block md:hidden">
               <button onClick={() => setExpand(!expand)}>
-                <img src={menuIcon} alt="Menu" className="h-5" />
+                <img src={menuIcon} alt="Menu" className="h-4 md:h-5" />
               </button>
             </div>
           </nav>

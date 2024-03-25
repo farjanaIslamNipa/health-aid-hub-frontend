@@ -16,7 +16,7 @@ const Community = () => {
   return (
     <div className="custom-container">
       <CommunityHeader />
-      <div className="my-20 max-w-[80%] mx-auto space-y-6">
+      <div className="my-10 md:my-20 w-full lg:max-w-[80%] mx-auto space-y-6">
       {
        sortedComments.map((comment : TComment | null) => <CommentCard key={comment?._id} comment={comment as TComment} />)
       }

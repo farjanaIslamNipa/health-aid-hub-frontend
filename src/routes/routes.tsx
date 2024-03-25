@@ -17,6 +17,8 @@ import Community from "../pages/community/Community";
 import CreateTestimonial from "../pages/dashboard/testimonials/CreateTestimonial";
 import AboutUs from "../pages/AboutUs";
 import VolunteerSignUp from "../pages/volunteer/VolunteerSignUp";
+import TermsAndConditions from "../pages/TermsAndConditions";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +58,14 @@ const router = createBrowserRouter([
       {
         path: "/about-us",
         element: <AboutUs />,
+      },
+      {
+        path: "/terms-and-conditions",
+        element: <TermsAndConditions />,
+      },
+      {
+        path: "/privacy-policy",
+        element: <PrivacyPolicy />,
       },
     ],
   },
